@@ -1,0 +1,72 @@
+<div class="main">
+<form [formGroup]="createToDo"  class="border p-4 rounded-3 bg-color-white" >
+    <div class="row g-0">
+        <div class="col text-center p-2 mb-3 heading1">
+            <span class="heading fs-3">ToDo Planner</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="task" class="col-sm-2 col-form-label">Task</label>
+        <div class="col mb-3">
+            <input type="text" class="form-control" id="task" formControlName="task">
+        </div>
+    </div>
+    <div class="row">
+        <label for="interval" class="col-sm-2 col-form-label">Interval</label>
+        <div class="col mb-3">
+            <select class="form-select" aria-label="Default select example" formControlName="interval" >
+                <option value="">Select Interval</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="today">Today</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <label for="priority" class="col-sm-2 col-form-label">Priority</label>
+        <div class="col mb-3">
+            <select class="form-select" aria-label="Default select example" formControlName="priority">
+                <option value="">Select Priority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+           <div class="d-grid">
+            <button type="submit" class="btn btn-dark" (click)="onCreate()">Create</button>
+           </div>
+        </div>
+    </div>
+<hr/>
+    <div class="row">
+        <div class="col mb-3">
+            <span class="viewLabel">View ToDos</span>
+        </div>
+    </div>
+
+     <!--View ToDo UI - New FORM CREATED -->
+    <div class="row">
+        <label for="interval" class="col-2 col-form-label">My ToDo</label>
+        <div class="col-7 mb-3">
+            <select class="form-select" aria-label="Default select example" formControlName="viewInterval">
+                <option value="">Select Interval</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="today">Today</option>
+            </select> 
+        </div>
+        <div class="col">
+            <div>
+             <button type="submit" class="btn btn-success" (click)="onView()">View</button>
+            </div>
+         </div>
+    </div>
+</form>
+   
+  
+</div>

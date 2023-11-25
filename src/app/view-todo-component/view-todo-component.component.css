@@ -1,0 +1,9 @@
+.card-header{
+    color: white;
+    font-weight: 600;
+}
+.btn-primary{
+    margin-left: 400px;
+    margin-top: 48px;
+    background-color: #008000;
+}

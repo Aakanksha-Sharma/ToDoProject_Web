@@ -1,0 +1,35 @@
+.main{
+    border: #000;
+    height: 479px;
+    width: 400px;
+    background-color: #79BAEC;
+    border-radius: 6px;
+
+    .heading{
+        font-weight: bold;
+        font-family: cursive;
+    }
+
+    .heading1{
+        border-radius: 17px;
+        background-color: #FEF5E7;
+    }
+}
+
+form{
+    width: 400px;
+}
+.btn-info{
+    color: #000;
+    background-color: cornsilk;
+    border-color: #0dcaf0;
+    width: 288px;
+}
+.viewLabel{
+    font-size: 20px;
+    padding-left: 125px;
+    font-style: oblique;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
