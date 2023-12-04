@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators  } from '@angular/forms';
 import {Router} from '@angular/router';
@@ -8,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./to-do-home-page.component.css']
 })
 export class ToDoHomePageComponent {
-constructor(private router: Router) {}  
+constructor(private router: Router, private http: HttpClient) {}  
 
 
 
@@ -25,6 +26,16 @@ onCreate(){
 
 onView(){
   console.log(this.createToDo.value.viewInterval);
-  this.router.navigateByUrl('/view')
+  const header = new HttpHeaders();
+  header.set('Access-Control-Allow-Origin', '*');
+   //calling view api
+   this.http.get('http://localhost:8080/getTaskDetail', { headers: header }).subscribe(res => {
+
+      console.log("-----------------------------------------");
+      console.log("Response-------",res);
+      this.router.navigateByUrl('/view');
+   });
+  
+ 
 }
 }
